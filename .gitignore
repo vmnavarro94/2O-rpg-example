@@ -1,6 +1,12 @@
 # Created by https://www.toptal.com/developers/gitignore/api/clion,c++
 # Edit at https://www.toptal.com/developers/gitignore?templates=clion,c++
 
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+rpg
+
 ### C++ ###
 # Prerequisites
 *.d
