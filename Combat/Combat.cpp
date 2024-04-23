@@ -1,6 +1,6 @@
-//
 // Created by Victor Navarro on 19/02/24.
 //
+
 #include "Combat.h"
 #include <iostream>
 #include <algorithm>
@@ -49,24 +49,22 @@ void Combat::prepareCombat() {
 void Combat::doCombat() {
     prepareCombat();
 
-    //Este while es 1 iteracion por ronda
     while(enemies.size() != 0 && teamMembers.size() != 0) {
         registerActions();
         executeActions();
     }
 
-    //No se imprime el nombre del ganador
     if(enemies.size() == 0) {
-        cout<<"You have won the combat"<<endl;
+        cout<<"||||Has ganado el combate||||"<<endl;
     }
     else {
-        cout<<"The enemies have won the combat - Game Over"<<endl;
+        cout<<"El enemigo ha ganado el combate |||Game Over|||"<<endl;
     }
 }
 
 void Combat::registerActions() {
     vector<Character*>::iterator participant = participants.begin();
-    //Una iteracion por turno de cada participante (player y enemigo)
+
     while(participant != participants.end()) {
         Character* target = nullptr;
         Action currentAction;
@@ -82,7 +80,7 @@ void Combat::registerActions() {
 }
 
 void Combat::executeActions() {
-    //Aqui se ejecutan las acciones
+
     while(!actions.empty()) {
         Action currentAction = actions.top();
         currentAction.action();
@@ -109,11 +107,11 @@ void Combat::checkForFlee(Character *character) {
     bool fleed = character->hasFleed();
     if(fleed) {
         if(character->getIsPlayer()) {
-            cout<<"You have fled the combat"<<endl;
+            cout<<"Has abandonado el combate ||No soportaste panzona||"<<endl;
             teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), character), teamMembers.end());
         }
         else {
-            cout<<character->getName()<<" has fled the combat"<<endl;
+            cout<<character->getName()<<" El enemigo ha dejado el combate"<<endl;
             enemies.erase(remove(enemies.begin(), enemies.end(), character), enemies.end());
         }
         participants.erase(remove(participants.begin(), participants.end(), character), participants.end());

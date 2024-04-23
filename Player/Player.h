@@ -17,7 +17,7 @@ protected:
     int experience;
     int level;
 public:
-    Player(string _name, int _health, int _attack, int _defense, int _speed);
+    Player(char _name[30], int _health, int _attack, int _defense, int _speed);
     void doAttack(Character *target) override;
     void takeDamage(int damage) override;
 
