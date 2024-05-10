@@ -8,9 +8,11 @@
 #include <vector>
 #include <string>
 #include <queue>
+#include <Combat.h>
 
 using namespace std;
 class Enemy;
+class player;
 class Combat {
 private:
 
@@ -36,6 +38,9 @@ public:
     void addParticipant(Character *participant);
     void doCombat();
     string participantsToString();
+
+
+    void increaseEnemyStats(int points);
 };
 
 #endif

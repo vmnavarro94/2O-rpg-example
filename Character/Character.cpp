@@ -62,9 +62,9 @@ int Character::getSpeed() {
 }
 
 char Character::toString() {
-    cout << "Name: " << name
-         << "\nHealth: " + to_string(health) + "\nAttack: " + to_string(attack) + "\nDefense: " + to_string(defense) +
-            "\nSpeed: " + to_string(speed);
+    cout << "Nombre: " << name
+         << "\nSalud: " + to_string(health) + "\nAtaque: " + to_string(attack) + "\nDefensa: " + to_string(defense) +
+            "\nVelocidad: " + to_string(speed);
 }
 
 

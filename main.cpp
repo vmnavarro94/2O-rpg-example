@@ -2,25 +2,27 @@
 #include "Enemy/Enemy.h"
 #include "Player/Player.h"
 #include "Combat/Combat.h"
-#include <cstring>
 
+
+
+//TODO:PREGUNTAR AL PROFE SI YA TIENEN QUE TENER UN VALOR DETERMINADO LOS ENEMIGOS EN LA EXPERIENCIA
 
 using namespace std;
 
 int main() {
-    cout << "Escribie el nombre del personaje: " << endl;
+    cout << "Ingresa el nombre de tu personaje: " << endl;
     char PlayerName[30];
     cin.getline(PlayerName, 30);
 
-    cout << "¿cual es el nombre del enemigo?" << endl;
+    cout << "Quien es tu enemigo:?" << endl;
     char EnemyName[30];
     cin.getline(EnemyName, 30);
 
-    cout<<"Cuál es el arma de tu personaje?"<< endl;
+    cout<<"escribe el arma del personaje: "<< endl;
     char PlayerArm [30];
     cin.getline(PlayerArm, 30);
 
-    cout<<"Nombre el arma de tu enemigo:"<< endl;
+    cout<<"escribe el arma del enemigo: "<< endl;
     char EnemyArm[30];
     cin.getline(EnemyArm, 30);
 

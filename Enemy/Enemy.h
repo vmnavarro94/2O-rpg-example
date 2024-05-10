@@ -1,3 +1,4 @@
+
 #ifndef Jueguito_ENEMY_H
 #define Jueguito_ENEMY_H
 #include "../Character/Character.h"

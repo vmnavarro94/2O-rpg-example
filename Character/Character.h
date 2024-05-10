@@ -1,4 +1,3 @@
-
 #include <cstring> //agregar para mover cadenas
 
 #ifndef Jueguito_CHARACTER_H
