@@ -24,10 +24,10 @@ void Enemy::doAttack(Character *target) {
 void Enemy::takeDamage(int damage) {
     setHealth(getHealth() - damage);
     if(getHealth() <= 0) {
-        cout<<getName()<<" has died "<<endl;
+        cout<<getName()<<" Ah muerto "<<endl;
     }
     else {
-        cout<<getName()<<" has taken " << damage << " damage whit a "<<getArm()<< endl;
+        cout<<getName()<<" has recibido " << damage << " daño con: "<<getArm()<< endl;
     }
 }
 
